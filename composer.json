@@ -27,7 +27,7 @@
         "typo3/form": "@dev",
         "typo3/setup": "@dev",
         "flowpack/neos-frontendlogin": "@dev",
-        "typo3/buildessentials": "3.3.x-dev",
+        "typo3/buildessentials": "dev-travis-composer as 3.3.x-dev",
         "mikey179/vfsstream": "~1.6",
         "phpunit/phpunit": "~4.8 || ~5.4.0",
         "symfony/css-selector": "~2.0",
@@ -41,5 +41,11 @@
         "post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
         "post-package-update": "TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
         "post-package-install": "TYPO3\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
-    }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/johannessteu/BuildEssentials.git"
+        }
+    ]
 }
